@@ -5,7 +5,7 @@
             Update Data Mahasiswa
         </h1>
 
-        <a href="{{route('mahasiswa.index')}}" class="btn btn-primary mb-3">
+        <a href="{{route('data-tunggal.index')}}" class="btn btn-primary mb-3">
             Data Mahasiswa
         </a>
 
@@ -19,7 +19,7 @@
                 
                 <div class="table-responsive">
                     
-                    <form action="{{route('mahasiswa.update', $mahasiswa->id)}}" method="POST">
+                    <form action="{{route('data-tunggal.update', $mahasiswa->id)}}" method="POST">
                         @csrf
                         @method('patch')
                         <div class="mb-3">

@@ -14,9 +14,10 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        return view('mahasiswa.index')->with([
-            'mahasiswa' => Mahasiswa::all(),
-        ]);
+        $mahasiswa   = Mahasiswa::all();
+
+        //dd($mahasiswa);
+        return view('mahasiswa.index', compact('mahasiswa'));
     }
 
     /**
@@ -26,9 +27,9 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        return view('mahasiswa.create')->with([
-            'mahasiswa' => Mahasiswa::all(),
-        ]);
+        $mahasiswa   = Mahasiswa::all();
+
+        return view('mahasiswa.create', compact('mahasiswa'));
     }
 
     /**
@@ -49,7 +50,8 @@ class MahasiswaController extends Controller
         $mahasiswa->score = $request->input('score');
         $mahasiswa->save();
 
-        return to_route('mahasiswa.index')->with('success','Data Succsessfully Added');
+        //return to_route('mahasiswa.index')->with('success','Data Succsessfully Added');
+        return redirect('/data-tunggal')->with('toast_success', 'Data Sucessfully Added');
     }
 
     /**
@@ -71,9 +73,9 @@ class MahasiswaController extends Controller
      */
     public function edit($id)
     {
-        return view('mahasiswa.edit')->with([
-            'mahasiswa' => Mahasiswa::find($id),
-        ]);
+        $mahasiswa   = Mahasiswa::find($id);
+
+        return view('mahasiswa.edit', compact('mahasiswa'));
     }
 
     /**
@@ -95,7 +97,8 @@ class MahasiswaController extends Controller
         $mahasiswa->score = $request->input('score');
         $mahasiswa->save();
 
-        return to_route('mahasiswa.index')->with('success','Data Succsessfully Updated');
+        //return to_route('mahasiswa.index')->with('success','Data Succsessfully Updated');
+        return redirect('/data-tunggal')->with('toast_success', 'Data Sucessfully Updated');
     }
 
     /**

@@ -19,7 +19,7 @@
                 <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     
-                    <a href="{{route('mahasiswa.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    <a href="{{route('data-tunggal.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                             class="fas fa-download fa-sm text-white-50"></i>  Add Data</a>
                 </div>
                 {{-- <div>
@@ -33,7 +33,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>No</th>
                                 <th>Name</th>
                                 <th>Score</th>
                                 <th>Action</th>
@@ -41,16 +41,16 @@
                         </thead>
 
                         <tbody>
-                            @foreach ($mahasiswa as $item)
+                            @foreach ($mahasiswa as $index => $item)
                             <tr>
-                                <td>{{$item->id}}</td>
+                                <td>{{$index + 1}}</td>
                                 <td>{{$item->nama}}</td>
                                 <td>{{$item->score}}</td>
                                 <td>
-                                    <form action="{{ route('mahasiswa.destroy', $item->id) }}" method="POST">
+                                    <form action="{{ route('data-tunggal.destroy', $item->id) }}" method="POST">
                                         @csrf
                                         @method('delete')
-                                        <a href="{{ route('mahasiswa.edit', $item->id) }}"
+                                        <a href="{{ route('data-tunggal.edit', $item->id) }}"
                                             class="btn btn-success btn-sm">
                                             Edit
                                         </a>

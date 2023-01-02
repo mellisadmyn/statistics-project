@@ -9,7 +9,7 @@ class PageController extends Controller
 {
     public function dashboard(){
         $total      = Mahasiswa::count();
-        $mean       = number_format(Mahasiswa::avg('score'), 2, ',');
+        $mean       = number_format(Mahasiswa::avg('score'), 1, ',');
         $min        = Mahasiswa::min('score');
         $max        = Mahasiswa::max('score');
 

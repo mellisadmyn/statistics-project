@@ -16,13 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'dashboard']);
+Route::get('/data-distribusi-frekuensi', [PageController::class, 'frequency'])->name('frequency');
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+Route::resource('/data-tunggal', MahasiswaController::class);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -31,8 +28,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
-Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
-Route::get('/data-distribusi-frekuensi', [PageController::class, 'frequency'])->name('frequency');
-
-Route::resource('/mahasiswa', MahasiswaController::class);

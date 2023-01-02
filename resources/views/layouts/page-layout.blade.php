@@ -10,18 +10,18 @@
     <title>{{ config('Laravel', 'Tugas Statistika') }}</title>
 
     <!-- Custom Icon -->
-    <link rel="shortcut icon" href="/style2/img/66260.jpg">
+    <link rel="shortcut icon" href="/template/img/66260.jpg">
 
     <!-- Custom fonts for this template -->
-    <link href="{{ asset('style2/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('template/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('style2/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('template/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="{{ asset('style2/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('template/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -86,21 +86,21 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('style2/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('style2/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('template/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('template/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ asset('style2/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('template/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('style2/js/sb-admin-2.min.js') }}"></script>
+    <script src="{{ asset('template/js/sb-admin-2.min.js') }}"></script>
 
     <!-- Page level plugins -->
-    <script src="{{ asset('style2/vendor/datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('style2/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('template/vendor/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('template/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
-    <script src="{{ asset('style2/js/demo/datatables-demo.js') }}"></script>
+    <script src="{{ asset('template/js/demo/datatables-demo.js') }}"></script>
 
 </body>
 

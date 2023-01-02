@@ -5,7 +5,7 @@
             Add Data Mahasiswa
         </h1>
 
-        <a href="{{route('mahasiswa.index')}}" class="btn btn-primary mb-3">
+        <a href="{{route('data-tunggal.index')}}" class="btn btn-primary mb-3">
             Data Mahasiswa
         </a>
 
@@ -19,7 +19,7 @@
                 
                 <div class="table-responsive">
                     
-                    <form action="{{route('mahasiswa.store')}}" method="POST">
+                    <form action="{{route('data-tunggal.store')}}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="nama" class="form-label">
