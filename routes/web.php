@@ -33,4 +33,6 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+Route::get('/data-distribusi-frekuensi', [PageController::class, 'frequency'])->name('frequency');
+
 Route::resource('/mahasiswa', MahasiswaController::class);

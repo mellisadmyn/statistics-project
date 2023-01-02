@@ -37,7 +37,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ url('mahasiswa') }}">Data Tunggal</a>
-                <a class="collapse-item" href="">Data Distribusi Frekuensi</a>
+                <a class="collapse-item" href="{{ url('data-distribusi-frekuensi') }}">Data Distribusi Frekuensi</a>
             </div>
         </div>
     </li>
