@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'dashboard']);
 Route::get('/data-distribusi-frekuensi', [PageController::class, 'frequency'])->name('frequency');
+Route::get('/tabel-deskripsi-data', [PageController::class, 'description'])->name('description');
+Route::get('/data-bergolong', [PageController::class, 'groupdata'])->name('data-bergolong');
+Route::post('/import-data', [PageController::class, 'import'])->name('import-data');
+Route::get('/export-data', [PageController::class, 'export'])->name('export-data');
 
 Route::resource('/data-tunggal', MahasiswaController::class);
 

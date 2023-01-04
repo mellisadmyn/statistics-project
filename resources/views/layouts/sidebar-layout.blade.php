@@ -38,6 +38,8 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ url('data-tunggal') }}">Data Tunggal</a>
                 <a class="collapse-item" href="{{ url('data-distribusi-frekuensi') }}">Data Distribusi Frekuensi</a>
+                <a class="collapse-item" href="{{ url('tabel-deskripsi-data') }}">Tabel Deskripsi Data</a>
+                <a class="collapse-item" href="{{ url('data-bergolong') }}">Data Bergolong</a>
             </div>
         </div>
     </li>

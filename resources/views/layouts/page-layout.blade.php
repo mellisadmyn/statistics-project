@@ -7,10 +7,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('Laravel', 'Tugas Statistika') }}</title>
+    <title>{{ config('Laravel', 'Statistics | Students Data') }}</title>
 
     <!-- Custom Icon -->
-    <link rel="shortcut icon" href="/template/img/66260.jpg">
+    <link rel="shortcut icon" href="/template/img/66260-removebg-preview.png">
 
     <!-- Custom fonts for this template -->
     <link href="{{ asset('template/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -23,9 +23,15 @@
     <!-- Custom styles for this page -->
     <link href="{{ asset('template/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Sweetalert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body id="page-top">
+    <!-- Sweetalert -->
+    @include('sweetalert::alert')
+
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Side bar section -->
@@ -101,7 +107,7 @@
 
     <!-- Page level custom scripts -->
     <script src="{{ asset('template/js/demo/datatables-demo.js') }}"></script>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

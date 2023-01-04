@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2023 at 10:17 AM
+-- Generation Time: Jan 04, 2023 at 09:27 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -45,8 +45,8 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `mahasiswa` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `nama` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `score` int(11) NOT NULL,
+  `nama` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `score` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -56,12 +56,17 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id`, `nama`, `score`, `created_at`, `updated_at`) VALUES
-(1, 'Hermione Granger', 90, '2022-11-07 11:38:36', '2022-11-25 00:03:08'),
-(2, 'Draco Malfoy', 78, '2022-11-07 11:55:25', '2022-11-07 11:55:25'),
-(4, 'Cedric Diggory', 80, '2022-11-07 21:06:53', '2022-11-07 21:06:53'),
-(9, 'Voldemort', 90, '2022-11-21 19:37:18', '2023-01-01 17:51:47'),
-(12, 'Lisa', 88, '2023-01-01 15:57:08', '2023-01-01 15:57:08'),
-(13, 'Lusi', 78, '2023-01-02 00:07:32', '2023-01-02 00:08:23');
+(48, 'Hermione Granger', 90, '2023-01-03 21:08:19', '2023-01-03 21:08:19'),
+(49, 'Draco Malfoy', 78, '2023-01-03 21:08:19', '2023-01-03 21:08:19'),
+(50, 'Cedric Diggory', 80, '2023-01-03 21:08:19', '2023-01-03 21:08:19'),
+(51, 'Voldemort', 100, '2023-01-03 21:08:19', '2023-01-03 21:08:19'),
+(52, 'Clarissa Roy', 55, '2023-01-03 21:08:19', '2023-01-03 21:34:55'),
+(53, 'Luna Lovegood', 90, '2023-01-03 21:36:08', '2023-01-03 21:38:33'),
+(64, 'Bellatrix Lestrange', 46, '2023-01-04 00:26:55', '2023-01-04 00:26:55'),
+(65, 'Dobby', 100, '2023-01-04 00:26:55', '2023-01-04 00:26:55'),
+(66, 'Ron Weasley', 80, '2023-01-04 00:26:55', '2023-01-04 00:26:55'),
+(67, 'Ginny Weasley', 90, '2023-01-04 00:26:55', '2023-01-04 00:26:55'),
+(68, 'Neville Longbottom', 55, '2023-01-04 00:26:55', '2023-01-04 00:26:55');
 
 -- --------------------------------------------------------
 
@@ -199,7 +204,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT for table `migrations`

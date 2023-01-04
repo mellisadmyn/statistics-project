@@ -2,7 +2,7 @@
     <div class="container">
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800 text-center">
-            Add Data Mahasiswa
+            Add Data
         </h1>
 
         <a href="{{route('data-tunggal.index')}}" class="btn btn-primary mb-3">
@@ -12,7 +12,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Add Data Mahasiswa</h6>
             </div>
             
             <div class="card-body">
@@ -25,11 +25,11 @@
                             <label for="nama" class="form-label">
                                 Name
                             </label>
-                            <input type="text" class="form-control" name="nama">
+                            <input type="text" class="form-control" name="nama" required>
                         </div>
                         <div class="mb-3">
                             <label for="score" class="form-label">Score</label>
-                            <input type="number" class="form-control" name="score">
+                            <input type="number" class="form-control" name="score" required>
                         </div>
                         
                         <div class="justify-items-end">

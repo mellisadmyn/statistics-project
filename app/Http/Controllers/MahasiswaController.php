@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MahasiswaController extends Controller
 {
@@ -49,6 +50,8 @@ class MahasiswaController extends Controller
         $mahasiswa->nama = $request->input('nama');
         $mahasiswa->score = $request->input('score');
         $mahasiswa->save();
+
+        Alert::success('Data Successfully Added');
 
         //return to_route('mahasiswa.index')->with('success','Data Succsessfully Added');
         return redirect('/data-tunggal')->with('toast_success', 'Data Sucessfully Added');
@@ -97,6 +100,8 @@ class MahasiswaController extends Controller
         $mahasiswa->score = $request->input('score');
         $mahasiswa->save();
 
+        Alert::success('Data Successfully Updated');
+
         //return to_route('mahasiswa.index')->with('success','Data Succsessfully Updated');
         return redirect('/data-tunggal')->with('toast_success', 'Data Sucessfully Updated');
     }
@@ -111,6 +116,8 @@ class MahasiswaController extends Controller
     {
         $mahasiswa = Mahasiswa::find($id);
         $mahasiswa->delete();
+
+        Alert::success('Data Successfully Deleted');
 
         return back()->with('success','Data Succsessfully Deleted');
     }

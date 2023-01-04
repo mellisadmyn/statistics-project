@@ -11,7 +11,7 @@
         <div class="card shadow mb-4">
             <!-- Table Heading -->
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Data Distribusi Frekuensi Mahasiswa</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Tabel Deskripsi Data Mahasiswa</h6>
             </div>
 
             <div class="card-body">
@@ -20,26 +20,25 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Score</th>
-                                <th>Frequency</th>
+                                <th>Total Data</th>
+                                <th>Average Score (Mean)</th>
+                                <th>Minimum Score</th>
+                                <th>Maximum Score</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            @foreach ($frequency as $index => $item)
                             <tr>
-                                <td>{{$index + 1}}</td>
-                                <td>{{$item->score_freq}}</td>
-                                <td>{{$item->frequency}}</td>    
+                                <td>{{ $data['total'] }}</td>
+                                <td>{{ $data['mean'] }}</td>
+                                <td>{{ $data['min'] }}</td>
+                                <td>{{ $data['max'] }}</td>  
                             </tr>
-                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-
     </div>
     <!-- /.container-fluid -->
 </x-page-layout>
