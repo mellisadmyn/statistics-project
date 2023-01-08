@@ -63,9 +63,10 @@
                                             class="btn btn-success btn-sm">
                                             Edit
                                         </a>
-                                        <button class="btn btn-danger btn-sm btndelete" onclick="return confirm('Are you sure want to remove this data?')"> 
+                                        <button class="btn btn-danger btn-sm btndelete">
                                             Delete
                                         </button>
+                                        {{-- onclick="return confirm('Are you sure want to remove this data?')" --}}
                                     </form>
                                 </td>
                             </tr>
@@ -104,11 +105,13 @@
     </div>
     <!-- /.container-fluid -->
 
-    {{-- konfirmasi delete masih error --}}
+    {{-- Delete Confirmation --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-    
-            $.ajaxSetup({
+
+            $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
@@ -118,13 +121,11 @@
                 e.preventDefault();
     
                 var deleteid = $(this).closest("tr").find('.delete_id').val();
-
-                swal({
+    
+                    Swal.fire({
                         title: 'Are you sure?',
-                        text: "You won't be able to revert this!",
-                        icon: "warning",
-                        buttons: true,
-                        dangerMode: true,
+                        text: "You will delete data and won't be able to revert this!",
+                        icon: 'warning',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
@@ -145,34 +146,15 @@
                                 success: function (response) {
                                     swal(response.status, {
                                             icon: "success",
-                                        })
-                                        .then((result) => {
-                                            location.reload();
-                                        });
+                                    })
+                                    .then((result) => {
+                                        window.location.reload();
+                                    });
                                 }
                             });
                         }
                     });
             });
         });
-    </script> 
-    
-    {{-- <script>
-        function deleteConfirm() {
-
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    document.getElementById('delete').submit();
-                }
-            })
-        }
-    </script> --}}
+    </script>
 </x-page-layout>

@@ -24,6 +24,7 @@ Route::post('/import-data', [PageController::class, 'import'])->name('import-dat
 Route::get('/export-data', [PageController::class, 'export'])->name('export-data');
 
 Route::resource('/data-tunggal', MahasiswaController::class);
+Route::delete('data-tunggal/destroy/{id}', [MahasiswaController::class, 'destroy'])->name('mahasiswa.destroy');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
